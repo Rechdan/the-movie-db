@@ -50,6 +50,10 @@ const styles = {
 
 			flex-flow: row;
 			display: flex;
+
+			@media all and (max-width: 768px) {
+				flex-flow: column;
+			}
 		`,
 
 		Poster: styled.div`
@@ -61,8 +65,17 @@ const styles = {
 			width: 15rem;
 
 			& > img {
+				flex: 0 0 auto;
+
 				border-radius: 1rem;
 				max-width: 100%;
+			}
+
+			@media all and (max-width: 768px) {
+				margin-bottom: 2rem;
+				margin-right: auto;
+				max-width: 15rem;
+				width: 100%;
 			}
 		`,
 
